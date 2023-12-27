@@ -17,7 +17,7 @@
 
   <header style="border-bottom: 1px solid var(--border-color, #eaeaea);">
     <div class="topnav content-limiter">
-      <img loading="lazy" src="img/nrsi_logo.svg" id="logo" class="snap-to-grid" />
+      <img loading="lazy" src="img/nrsi_logo.svg" style="margin-top: 2rem;" id="logo" class="snap-to-grid" />
       <button class="h-navbar-icon hide-desktop" onclick="openNav()" style="margin-left: 8px; float: right;"><img src="img/menu.svg" /></button>
       <span id="auth" class="hide-mobile snap-to-grid"><button class="btn-excl">Личный кабинет</button><button class="btn-excl"><img src="img/user.svg" style="height: 1rem" /></button></span>
       <a style="color: #2D19BC" href="">Рейтинг</a>
@@ -263,13 +263,13 @@
   </div>
   <footer class="content-limiter">
     <div id="footer-flex" class="snap-to-grid hide-mobile" style="display: flex; justify-content: space-between; border-radius: 32px; background-color: var(--text-color, #2b303d); margin-top: 16px; padding: 2rem;">
-      <img loading="lazy" id="logo" src="nrsi_logo_white.svg" class="snap-to-grid" style="width: 100%; overflow: hidden; max-width: 16rem; margin: auto 0;" />
+      <img loading="lazy" id="logo" src="img/nrsi_logo_white.svg" class="snap-to-grid" style="width: 100%; overflow: hidden; max-width: 16rem; margin: auto 0;" />
       <div>
         <div style="gap: 8px; display: flex; align-items: flex-start;">
           <a href="privacy-policy" style="color: var(--text-contrast-color, #fff); font: 400 14px/157% Inter, sans-serif; text-decoration: none;">Политика конфиденциальности</a><br />
           <a href="account" style="color: var(--text-contrast-color, #fff); font: 400 14px/157% Inter, sans-serif; text-decoration: none;">Личный кабинет</a><br />
         </div>
-        <div style="color: var(--text-contrast-color, #fff); margin-top: 3rem; align-self: left; white-space: nowrap; font: 400 14px/157% Inter, sans-serif; float: right">Разработано в <img loading="lazy" src="paraweb.svg"
+        <div style="color: var(--text-contrast-color, #fff); margin-top: 3rem; align-self: left; white-space: nowrap; font: 400 14px/157% Inter, sans-serif; float: right">Разработано в <img loading="lazy" src="img/paraweb.svg"
             style="margin-left: 0.125rem; transform: translate(0px,0.2rem);" /></div>
       </div>
     </div>
@@ -406,19 +406,21 @@
   </div>
 
   <div id="ratenav" class="overlay1">
-      <div class="snap-to-grid">
-        <img loading="lazy" style="padding-top: 2rem" src="img/nrsi_logo_white.svg" id="logo" />
-        <a href="javascript:void(0)" class="curtain-button" style="margin: 16px; float: right" onclick="closeNav()"> <img src="img/close.svg" /></a>
-        <div style="display: flex; flex-direction: column; padding: 2rem">
-          <h2><a href="#" style="text-decoration: none; color: white">О проекте</a></h2>
-          <h2><a href="#" style="text-decoration: none; color: white">Эксперты</a></h2>
-          <h2><a href="#" style="text-decoration: none; color: white">Методология</a></h2>
-          <h2><a href="#" style="text-decoration: none; color: white">Рейтинг</a></h2>
-          <p>
-            <span id="auth"><button class="btn-excl" style="background-color: #5545c5;">Личный кабинет</button><button class="btn-excl" style="background-color: #5545c5;"><img src="img/user.svg" style="height: 1rem" /></button></span>
-          </p>
-        </div>
+    <div class="snap-to-grid">
+      <div style="border-bottom: 1px solid var(--border-color, #332688); padding-bottom: 1rem;">
+      <img loading="lazy" style="padding-top: 1.5rem" src="img/nrsi_logo_white.svg" id="logo" />
+      <a href="javascript:void(0)" class="curtain-button" style="padding: 0.2rem; float: right" onclick="closeNav()"> <img src="img/close.svg" /></a>
+      </div>
+      <div style="display: flex; flex-direction: column; padding-top: 2rem;">
+        <h2 style="line-height: 1rem!important"><a href="#" style="text-decoration: none; color: white">О проекте</a></h2>
+        <h2 style="line-height: 1rem!important"><a href="#" style="text-decoration: none; color: white">Эксперты</a></h2>
+        <h2 style="line-height: 1rem!important"><a href="#" style="text-decoration: none; color: white">Методология</a></h2>
+        <h2 style="line-height: 1rem!important"><a href="rating.html" style="text-decoration: none; color: white">Рейтинг</a></h2>
+        <p>
+          <span id="auth"><button class="btn-excl" style="background-color: #5545c5;">Личный кабинет</button><button class="btn-excl" style="background-color: #5545c5;"><img src="img/user.svg" style="height: 1rem" /></button></span>
+        </p>
       </div>
     </div>
+  </div>
 </body>
 </html>

@@ -24,17 +24,23 @@ body {
 html {
   font-size: 62.5%;
   background: #fff;
+}
 
-  @media screen and (max-width: 767px) {
-    font-size: calc(10px + 13 * (100vw - 375px) / 447);
+@media screen and (max-width: 767px) {
+  html {
+    font-size: calc(10px 13 * (100vw - 375px) / 447);
   }
+}
 
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
-    font-size: calc(10px + 4 * (100vw - 768px) / 255);
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  html {
+    font-size: calc(10px 4 * (100vw - 768px) / 255);
   }
+}
 
-  @media (min-width: 1024px) and (max-width: 1360px) {
-    font-size: calc(8px + 2 * (100vw - 1024px) / 336);
+@media (min-width: 1024px) and (max-width: 1360px) {
+  html {
+    font-size: calc(8px 2 * (100vw - 1024px) / 336);
   }
 }
 
@@ -98,7 +104,7 @@ h2 {
 
 #logo {
   height: 5rem;
-  margin-top: 1.25rem;
+  margin: 1.25rem;
 }
 
 header {
@@ -153,12 +159,6 @@ html {
   border: 1px;
 }
 
-.btn-excl:hover {
-  background: linear-gradient(90deg, rgba(25, 27, 188, 1) 0%, rgba(32, 32, 218, 1) 44%, rgba(45, 25, 188, 1) 100%);
-  background-color: #2d19bc00;
-  transition: background-color 2s;
-}
-
 .topnav {
   overflow: hidden;
 }
@@ -168,7 +168,7 @@ html {
   float: right;
   color: #fff;
   text-align: center;
-  padding: 3.25rem 1.75rem;
+  padding: 3.75rem 1.75rem;
   text-decoration: none;
   font-family: Inter;
   font-size: 1rem;
@@ -293,16 +293,32 @@ html {
   display: flex;
   width: 40px;
   height: 40px;
-  padding: 0.5rem;
+  margin-top: 1.5rem;
   justify-content: center;
   align-items: center;
   border-radius: 12px;
   background: var(--text-contrast-color, #FFF);
 }
 
+.btn>a:hover {
+  background: linear-gradient(135deg, rgba(48,27,195,1) 5%, rgba(24,7,135,1) 100%);
+}
+
+.btn>a:hover~a {
+  background: linear-gradient(135deg, rgba(24,7,135,1) 0%, rgba(15,0,114,1) 100%);
+}
+
+.btn>a:hover prev {
+  background: linear-gradient(135deg, rgba(48, 27, 195, 1) 5%, rgba(24, 7, 135, 1) 100%);;
+}
+
 @media (max-width: 767px) {
   .hide-mobile {
     display: none!important;
+  }
+  .killme {
+    padding: 1rem 1.5rem!important;
+    font-size: 1rem!important;
   }
 
   header {
@@ -313,9 +329,16 @@ html {
     flex-direction: column;
   }
 
+  header .topnav {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+
   #logo {
     height: 3.5rem;
-    margin-top: 0rem;
+    margin-top: 0.5rem!important;
+    margin-left: 0rem;
+    margin-bottom: 0rem;
   }
 
   .snap-to-grid {
@@ -418,6 +441,17 @@ html {
   .hide-desktop {
     display: none;
   }
+}
+
+.killme {
+  background-color: #5545c5;
+  color: #fff;
+  border: 1px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
 }
 
 .dropbtn {
