@@ -262,14 +262,26 @@
     </div>
   </div>
   <footer class="content-limiter">
-    <div id="footer-flex" class="snap-to-grid" style="display: flex; justify-content: space-between;; border-radius: 32px; background-color: var(--text-color, #2b303d); margin-top: 16px; padding: 2rem;">
-      <img loading="lazy" id="logo" src="img/nrsi_logo_white.svg" class="snap-to-grid" style="width: 100%; overflow: hidden; max-width: 16rem; margin: auto 0;" />
+    <div id="footer-flex" class="snap-to-grid hide-mobile" style="display: flex; justify-content: space-between; border-radius: 32px; background-color: var(--text-color, #2b303d); margin-top: 16px; padding: 2rem;">
+      <img loading="lazy" id="logo" src="nrsi_logo_white.svg" class="snap-to-grid" style="width: 100%; overflow: hidden; max-width: 16rem; margin: auto 0;" />
       <div>
         <div style="gap: 8px; display: flex; align-items: flex-start;">
-          <a href="privacy-policy" style="color: var(--text-contrast-color, #fff); font: 400 14px/157% Inter, sans-serif;">Политика конфиденциальности</a><br />
-          <a href="account" style="color: var(--text-contrast-color, #fff); font: 400 14px/157% Inter, sans-serif;">Личный кабинет</a><br />
+          <a href="privacy-policy" style="color: var(--text-contrast-color, #fff); font: 400 14px/157% Inter, sans-serif; text-decoration: none;">Политика конфиденциальности</a><br />
+          <a href="account" style="color: var(--text-contrast-color, #fff); font: 400 14px/157% Inter, sans-serif; text-decoration: none;">Личный кабинет</a><br />
         </div>
-        <div style="color: var(--text-contrast-color, #fff); margin-top: 3rem; align-self: left; white-space: nowrap; font: 400 14px/157% Inter, sans-serif; float: right">Разработано в <img loading="lazy" src="img/paraweb.svg"
+        <div style="color: var(--text-contrast-color, #fff); margin-top: 3rem; align-self: left; white-space: nowrap; font: 400 14px/157% Inter, sans-serif; float: right">Разработано в <img loading="lazy" src="paraweb.svg"
+            style="margin-left: 0.125rem; transform: translate(0px,0.2rem);" /></div>
+      </div>
+    </div>
+
+    <div id="footer-flex" class="snap-to-grid hide-desktop" style="display: flex; justify-content: space-between; border-radius: 32px; background-color: var(--text-color, #2b303d); margin-top: 16px; padding: 2rem;">
+      <img loading="lazy" src="img/nrsi_logo_white.svg" class="snap-to-grid" style="width: 100%; overflow: hidden; max-width: 16rem; margin: auto 0;"/>
+      <div>
+        <div style="gap: 8px; margin-top: 2.5rem; line-height: 3rem;">
+          <a href="privacy-policy" style="color: var(--text-contrast-color, #fff); font: 400 14px/157% Inter, sans-serif; text-decoration: none;">Политика конфиденциальности</a><br />
+          <a href="account" style="color: var(--text-contrast-color, #fff); font: 400 14px/157% Inter, sans-serif; text-decoration: none;">Личный кабинет</a><br />
+        </div>
+        <div style="color: var(--text-contrast-color, #fff); margin-top: 1.5rem; white-space: nowrap; font: 400 14px/157% Inter, sans-serif; float: left;">Разработано в <img loading="lazy" src="img/paraweb.svg"
             style="margin-left: 0.125rem; transform: translate(0px,0.2rem);" /></div>
       </div>
     </div>
