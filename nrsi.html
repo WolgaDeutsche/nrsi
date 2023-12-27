@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>НРСИ — как мы делали прототип?</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/pure-min.css" />
+  <link rel="stylesheet" href="css/grids-responsive-min.css" />
+  <style>
+    html {
+      font-family: Inter;
+      font-size: 18px;
+    }
+
+    .header {
+      position: relative;
+      text-align: center;
+      background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgb(53, 67, 255) 100%);
+      color: white;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-family: 'Play', sans-serif;
+    }
+
+    .logo {
+      width: 50px;
+      fill: white;
+      padding-right: 15px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .inner-header {
+      height: 65vh;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .flex {
+      /*Flexbox for containers*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .waves {
+      position: relative;
+      width: 100%;
+      height: 15vh;
+      margin-bottom: -7px;
+      /*Fix for safari gap*/
+      min-height: 100px;
+      max-height: 150px;
+    }
+
+    .content {
+      position: relative;
+      height: 20vh;
+      text-align: center;
+      background-color: white;
+    }
+
+    /* Animation */
+
+    .parallax>use {
+      animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+    }
+
+    .parallax>use:nth-child(1) {
+      animation-delay: -2s;
+      animation-duration: 7s;
+    }
+
+    .parallax>use:nth-child(2) {
+      animation-delay: -3s;
+      animation-duration: 10s;
+    }
+
+    .parallax>use:nth-child(3) {
+      animation-delay: -4s;
+      animation-duration: 13s;
+    }
+
+    .parallax>use:nth-child(4) {
+      animation-delay: -5s;
+      animation-duration: 20s;
+    }
+
+    @keyframes move-forever {
+      0% {
+        transform: translate3d(-90px, 0, 0);
+      }
+
+      100% {
+        transform: translate3d(85px, 0, 0);
+      }
+    }
+
+    /*Shrinking for mobile*/
+    @media (max-width: 768px) {
+      .waves {
+        height: 40px;
+        min-height: 40px;
+      }
+
+      .content {
+        height: 30vh;
+      }
+
+      h1 {
+        font-size: 28px;
+        font-family: 'Play', sans-serif;
+      }
+    }
+  </style>
+</head>
+
+<body>
+    <div class="header">
+      <!--Content before waves-->
+      <div class="inner-header flex">
+        <h1>Сайт Независимого рейтинга сайтов университетов: <br /> прогресс и перспективы</h1>
+      </div>
+
+      <!--Waves Container-->
+      <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+          </g>
+        </svg>
+      </div>
+      <!--Waves end-->
+
+    </div>
+    <!--Header ends-->
+
+    <!--Content starts-->
+    <div class="content flex">
+      <h1>🡻</h1>
+    </div>
+    <!--Content ends-->
+  <div style="height: 100%; background-color: #fff">
+    <div class="pure-g" style="padding: 3rem">
+      <div class="pure-u-1 pure-u-md-1-2"></div>
+      <div class="pure-u-1 pure-u-md-1-4">
+        <h2>Задача — сверстать интерактивный макет без чётких требований к стэку</h2>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-4">
+        <p>Первые наброски были готовы в вечер вторника. Это были хэдер и разбитый на две части текстовый элемент, как самые простые элементы сайта. </p>
+        <p>При разработке задействовал большую часть функционала HTML/CSS — от простого позиционирования слева-справа в хэдере до комплексных медиазапросов, смешения Flexbox с Grid и анимаций без JavaScript.</p>
+        <p>Всё выведено в локаль и не привязано к тому или иному фреймворку — это усложнило разработку, но (потенциально) значительно облегчило встраиваемость.</p>
+        <p>Общий вес проекта (без учёта графики) — в пределах <b>90 Кб</b>. С учётом того, что всё работает без запросов к внешним серверам, страница будет грузиться очень быстро.</p>
+        <p>Ознакомиться с текущей версией сайта можно <a href="./index.html">тут</a></p>
+      </div>
+    </div>
+  </div>
+  <div style="height: 100%; background-color: #eee">
+    <div class="pure-g" style="padding: 3rem">
+      <div class="pure-u-md-1-4 pure-u-1">
+        <h2>Чистый код с минимумом зависимостей</h2>
+      </div>
+      <div class="pure-u-md-1-4 pure-u-1">
+        <p>Это принцип, по которому редко работают в современной IT-среде, но который обычно приносит самые сочные плоды.</p>
+        <p>Есть и нюансы, конечно: разработка может затянуться на более продолжительный срок, а логику некоторых элементов приходится писать с нуля.</p>
+        <p>Мой код легко встроить в проект с абсолютно любым стэом — от статики на Hugo до полноценного веб-приложения на Laravel.</p>
+      </div>
+      <div class="pure-u-md-1-2 pure-u-1">
+      </div>
+    </div>
+  </div>
+  <div style="height: 100%; background-color: #fff">
+    <div class="pure-g" style="padding: 3rem">
+      <div class="pure-u-1 pure-u-md-1-2">
+      </div>
+      <div class="pure-u-1 pure-u-md-1-4">
+        <h2>Макет свёрстан на ~95 процентов</h2>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-4">
+        <p>На текущий момент большая часть основных элементов — на месте и соответствуют макету. Не хватает анимации на главной странице и полной проверки всех элементов на адаптивность — тут было бы неплохо поработать с авторским надзором дизайнера.</p>
+        <p>Главной ошибкой стало работать не в парадигме mobile first — из-за этого было потеряно достаточно времени, которое могло быть потрачено на что-то более важное для общего пользовательского впечатления.</p>
+      </div>
+    </div>
+  </div>
+  <div style="height: 100%; background-color: #eee"">
+    <div class="pure-g" style="padding: 3rem">
+    <div class="pure-u-md-1-4 pure-u-1">
+      <h2>Получившийся результат, в целом, готов к сдаче и доработке</h2>
+    </div>
+    <div class="pure-u-md-1-4 pure-u-1">
+      <p>Несколько ошибок, конечно, вполне могли остаться — это результат полной стилизации с минимумом фреймворков.</p>
+      <p>Считаю, что весь основной функционал реализован в виде, максимально схожем с макетом.</p>
+      <p>Буду особенно рад принять любую информацию о том, чем пользуются разработчики на Вашей стороне — например, если им привычен Bootstrap, то за несколько дней (над проектом работаю в нерабочее время) смогу переписать основные элементы на нём.</p>
+    </div>
+    <div class="pure-u-md-1-2 pure-u-1"></div>
+  </div>
+  <div style="height: 100%; background-color: rgba(84, 58, 183, 1)">
+      <div class=" pure-g" style="padding: 2rem">
+    <div class="pure-u-md-1-4 pure-u-1"></div>
+    <div class="pure-u-md-1-2 pure-u-1">
+      <p style="text-align: center; color: white">Верстал Роман Смирнов специально для <span style="font-family: Play">PARAWEB</span>.</p>
+    </div>
+    <div class="pure-u-md-1-4 pure-u-1"></div>
+  </div>
+  </div>
+</body>
+
+</html>

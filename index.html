@@ -1,0 +1,322 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Рейтинг НРСИ</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+  <link rel="stylesheet" href="css/pure-min.css" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/grids-responsive-min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div style="background: linear-gradient(155deg, rgba(15,0,114,1) 0%, rgba(44,24,186,1) 100%); height: 100%; width: 100%;">
+    <header>
+      <div class="topnav content-limiter">
+        <img id="logo" loading="lazy" src="img/nrsi_logo_white.svg" />
+        <button class="h-navbar-icon hide-desktop" onclick="openNav()" style="margin-left: 8px; float: right;"><img src="img/menu.svg" /></button>
+        <button class="h-navbar-icon hide-desktop" style="float: right; background-color: #5545c5"><img src="img/user.svg" /></button>
+        <span id="auth" class="hide-mobile snap-to-grid"><button style="background-color: #5545c5;" class="btn-excl">Личный кабинет</button><button style="background-color: #5545c5;" class="btn-excl"><img src="img/user.svg"
+              style="height: 1rem" /></button></span>
+        <a href="./rating.html">Рейтинг</a>
+        <a href="">Методология</a>
+        <a href="">Эксперты</a>
+        <a href="./index.html">О проекте</a>
+      </div>
+    </header>
+
+    <div class="content-limiter">
+      <div class="snap-to-grid">
+        <div style="margin-top: 16px;">
+          <h1 style="color: white;">Независимый рейтинг сайтов университетов</h1>
+        </div>
+        <div style="float: left; padding-bottom: 10rem;">
+          <button style="background-color: #5545c5;" class="btn-excl">Смотреть рейтинг</button><button style="background-color: #5545c5;" class="btn-icon"><img src="img/arrow-right.svg" style="height: 1rem" /></button>
+        </div>
+
+      </div>
+    </div>
+    
+    <div class="info content-limiter" style="display: flex;">
+      <div id="b1" style="width: 30rem; border-right: 1px solid var(--border-color, #ffffff26); height: 10rem; align-items: center; display: flex;">
+        <img id="un" src="img/un/un.png" style="">
+        <p id="p2" style="font-size: 1rem; line-height: 1.5rem; width: 8rem; color: var(--text-color, #FFFFFF); display: inline-flex; float: right; padding-left: 2rem;">вузов уже присоединились к проекту</p>
+      </div>
+      <p id="p1" style="padding-left: 2rem; padding-right: 6rem; color: var(--text-color, #FFFFFF);">Единственный независимый рейтинг, который комплексно <br />и объективно оценивает сайты российских университетов</p>
+    </div>
+  </div>
+
+  <div class="content-limiter">
+    <div class="pure-g snap-to-grid" style="margin-top: 7.5rem; margin-bottom: 7.5re;">
+      <div class="pure-u-1 pure-u-md-1-2">
+        <h2 style="font-family: Inter; margin: inherit; color: var(--text-color, #2B303D);">Описание проекта</h2>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2 text block-padding"><p>Несмотря на активную цифровую трансформацию российских вузов, их сайты не всегда соответствуют современным тенденциям дизайна и разработки. Университетам недостаточно просто
+        обновлять свои веб-ресурсы, важно следить за высоким качеством
+        этих изменений. Рейтинг призван стимулировать вузы к более ответственному отношению к своей digital-инфраструктуре.<br /><br />
+        Цель рейтинга — вдохновить учебные заведения на модернизацию официальных сайтов, а также повысить общий уровень цифровой трансформации образования в стране. Вузы, чьи сайты займут высокие позиции в рейтинге, смогут получить
+        дополнительное
+        признание и поднять свою репутацию среди абитуриентов, студентов, преподавателей, партнеров и общественности в целом.</p>
+      </div>
+    </div>
+  <div class="content-limiter snap-to-grid">
+    <h2 class="snap-to-grid">Эксперты</h2>
+  </div>  
+    <div class="pure-g snap-to-grid" style="margin-top: 5.5rem;">
+      <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" style="margin-bottom: 2.5rem;">
+        <img loading="lazy" style="margin: auto; display: block;" src="img/experts/1.png">
+        <div>
+          <h3 style="text-align: center; color: #2B303D;">Эмиль Ахтямов</h3>
+          <p style="text-align: center; color: #2B303D;">Директор, веб-интегратор «Паравеб»</p>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" style="margin-bottom: 2.5rem;">
+        <img loading="lazy" style="margin: auto; display: block;" src="img/experts/2.png">
+        <div>
+          <h3 style="text-align: center; color: #2B303D;">Николай Глухих</h3>
+          <p style="text-align: center; color: #2B303D;">Директор, Digital-агентство WOW</p>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" style="margin-bottom: 2.5rem;">
+        <img loading="lazy" style="margin: auto; display: block;" src="img/experts/3.png">
+        <div>
+          <h3 style="text-align: center; color: #2B303D;">Артемий Фоминых</h3>
+          <p style="text-align: center; color: #2B303D;">Директор, веб-интегратор «Паравеб»</p>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" style="margin-bottom: 2.5rem;">
+        <img loading="lazy" style="margin: auto; display: block;" src="img/experts/4.png">
+        <div>
+          <h3 style="text-align: center; color: #2B303D;">Алёна Фоминых</h3>
+          <p style="text-align: center; color: #2B303D;">Директор по развитию, Брендинговое агентство lovemedo</p>
+        </div>
+      </div>
+    </div>
+    <div class="pure-g snap-to-grid">
+      <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" style="margin-bottom: 2.5rem;">
+        <img loading="lazy" style="margin: auto; display: block;" src="img/experts/5.png">
+        <div>
+          <h3 style="text-align: center; color: #2B303D;">Павел Бортвин</h3>
+          <p style="text-align: center; color: #2B303D;">Заместитель директора, Компания «ИТ Форвард»</p>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" style="margin-bottom: 2.5rem;">
+        <img loading="lazy" style="margin: auto; display: block;" src="img/experts/6.png">
+        <div>
+          <h3 style="text-align: center; color: #2B303D;">Рустам Сатрудинов</h3>
+          <p style="text-align: center; color: #2B303D;">Заместитель директора по развитию, Компания «ИТ Форвард»</p>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" style="margin-bottom: 2.5rem;">
+        <img loading="lazy" style="margin: auto; display: block;" src="img/experts/7.png">
+        <div>
+          <h3 style="text-align: center; color: #2B303D;">Александра Шмырина</h3>
+          <p style="text-align: center; color: #2B303D;">Начальник управления цифровых технологий СибГМУ, Сибирский государственный медицинский университет</p>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" style="margin-bottom: 2.5rem;">
+        <img loading="lazy" style="margin: auto; display: block;" src="img/experts/8.png">
+        <div>
+          <h3 style="text-align: center; color: #2B303D;">Алексей Сафонов</h3>
+          <p style="text-align: center; color: #2B303D;">Инженер по работе с данными АНО «Центр развития образования «Интеграция»</p>
+        </div>
+      </div>
+    </div>
+    <div class="pure-g snap-to-grid">
+      <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" style="margin-bottom: 2.5rem;">
+        <img loading="lazy" style="margin: auto; display: block;" src="img/experts/9.png">
+        <div>
+          <h3 style="text-align: center; color: #2B303D;">Мария Моисеенко</h3>
+          <p style="text-align: center; color: #2B303D;">Управляющий партнер консалтингового агентства «Университеты и маркетинг», Консалтинговое агентство «Университеты и маркетинг»</p>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" style="margin-bottom: 2.5rem;">
+        <img loading="lazy" style="margin: auto; display: block;" src="img/experts/10.png">
+        <div>
+          <h3 style="text-align: center; color: #2B303D;">Диана Крез</h3>
+          <p style="text-align: center; color: #2B303D;">Директор по работе с образовательными организациями, веб-интегратор «Паравеб»</p>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" style="margin-bottom: 2.5rem;">
+        <img loading="lazy" style="margin: auto; display: block;" src="img/experts/11.png">
+        <div>
+          <h3 style="text-align: center; color: #2B303D;">Никита Воеводин</h3>
+          <p style="text-align: center; color: #2B303D;">Директор, Digital-агентство RedLine</p>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" style="margin-bottom: 2.5rem;">
+        <img loading="lazy" style="margin: auto; display: block;" src="img/experts/12.png">
+        <div>
+          <h3 style="text-align: center; color: #2B303D;">Владимир Томко</h3>
+          <p style="text-align: center; color: #2B303D;">Директор по развитию, управляющий партнер, брендинговое агентство «Мелехов и Филюрин»</p>
+        </div>
+      </div>
+    </div>
+    <div class="pure-g snap-to-grid">
+      <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" style="margin-bottom: 2.5rem;">
+        <img loading="lazy" style="margin: auto; display: block;" src="img/experts/13.png">
+        <div>
+          <h3 style="text-align: center; color: #2B303D;">Максим Шумков</h3>
+          <p style="text-align: center; color: #2B303D;">Директор по цифровым продуктам, ГК «Самолёт»</p>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" style="margin-bottom: 2.5rem;">
+        <img loading="lazy" style="margin: auto; display: block;" src="img/experts/14.png">
+        <div>
+          <h3 style="text-align: center; color: #2B303D;">Микаэл Сагиров</h3>
+          <p style="text-align: center; color: #2B303D;">Директор, digital-агентство Sagirov</p>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" style="margin-bottom: 2.5rem;">
+        <img loading="lazy" style="margin: auto; display: block;" src="img/experts/15.png">
+        <div>
+          <h3 style="text-align: center; color: #2B303D;">Александр Фадеев</h3>
+          <p style="text-align: center; color: #2B303D;">Директор инженерной школы информационных технологий и робототехники, Томский политех</p>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" style="margin-bottom: 2.5rem;">
+        <img loading="lazy" style="margin: auto; display: block;" src="img/experts/16.png">
+        <div>
+          <h3 style="text-align: center; color: #2B303D;">Амирхон Рахмонов</h3>
+          <p style="text-align: center; color: #2B303D;">Учредитель и директор, NAN agency</p>
+        </div>
+      </div>
+    </div>
+    <div class="pure-g snap-to-grid">
+      <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" style="margin-bottom: 2.5rem;">
+        <img loading="lazy" style="margin: auto; display: block;" src="img/experts/17.png">
+        <div>
+          <h3 style="text-align: center; color: #2B303D;">Антон Гураль</h3>
+          <p style="text-align: center; color: #2B303D;">Учредитель и арт-директор, Дизайн-студия «ОГОНЬ.ДИЗАЙН»</p>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" style="margin-bottom: 2.5rem;">
+        <img loading="lazy" style="margin: auto; display: block;" src="img/experts/18.png">
+        <div>
+          <h3 style="text-align: center; color: #2B303D;">Ольга Смирнова</h3>
+          <p style="text-align: center; color: #2B303D;">Начальник управления цифрового развития, Донской государственный технический университет</p>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" style="margin-bottom: 2.5rem;">
+        <img loading="lazy" style="margin: auto; display: block;" src="img/experts/19.png">
+        <div>
+          <h3 style="text-align: center; color: #2B303D;">Евгения Евстигнеева</h3>
+          <p style="text-align: center; color: #2B303D;">Заместитель руководителя Центра проектов и практик Института дополнительного образования Университета Иннополис, Университет Иннополис</p>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" style="margin-bottom: 2.5rem;">
+        <img loading="lazy" style="margin: auto; display: block;" src="img/experts/20.png">
+        <div>
+          <h3 style="text-align: center; color: #2B303D;">Роман Широков</h3>
+          <p style="text-align: center; color: #2B303D;">SRE, Тинькофф Бизнес</p>
+        </div>
+      </div>
+    </div>
+    <div class="pure-g snap-to-grid">
+      <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" style="margin-bottom: 2.5rem;">
+        <img loading="lazy" style="margin: auto; display: block;" src="img/experts/21.png">
+        <div>
+          <h3 style="text-align: center; color: #2B303D;">Ильдар Низамеев</h3>
+          <p style="text-align: center; color: #2B303D;">Учредитель, digital-агентство ilar</p>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" style="margin-bottom: 2.5rem;">
+        <img loading="lazy" style="margin: auto; display: block;" src="img/experts/22.png">
+        <div>
+          <h3 style="text-align: center; color: #2B303D;">Дарья Казакова</h3>
+          <p style="text-align: center; color: #2B303D;">Руководитель направления по работе с образовательными организациями дирекции развития агро- и биотехнологий, Иннопрактика</p>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" style="margin-bottom: 2.5rem;">
+        <img loading="lazy" style="margin: auto; display: block;" src="img/experts/23.png">
+        <div>
+          <h3 style="text-align: center; color: #2B303D;">Александр Вишняков</h3>
+          <p style="text-align: center; color: #2B303D;">Директор PR-офиса, Балтийский федеральный университет имени Иммануила Канта</p>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" style="margin-bottom: 2.5rem;">
+        <img loading="lazy" style="margin: auto; display: block;" src="img/experts/24.png">
+        <div>
+          <h3 style="text-align: center; color: #2B303D;">Кристина Наумова</h3>
+          <p style="text-align: center; color: #2B303D;">Начальник отдела информационно-стратегических коммуникаций и рекламы, СПбГУАП</p>
+        </div>
+      </div>
+    </div>
+    <div class="pure-g snap-to-grid">
+      <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" style="margin-bottom: 2.5rem;">
+        <img loading="lazy" style="margin: auto; display: block;" src="img/experts/30.png">
+        <div>
+          <h3 style="text-align: center; color: #2B303D;">Рустам Абдуллаев</h3>
+          <p style="text-align: center; color: #2B303D;">Директор PR-офиса, Балтийский федеральный университет имени Иммануила Канта</p>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" style="margin-bottom: 2.5rem;">
+        <img loading="lazy" style="margin: auto; display: block;" src="img/experts/31.png">
+        <div>
+          <h3 style="text-align: center; color: #2B303D;">Алексей Голодников</h3>
+          <p style="text-align: center; color: #2B303D;">Инженер, компания ЮMoney</p>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" style="margin-bottom: 2.5rem;">
+        <img loading="lazy" style="margin: auto; display: block;" src="img/experts/29.png">
+        <div>
+          <h3 style="text-align: center; color: #2B303D;">Владимир Новиков</h3>
+          <p style="text-align: center; color: #2B303D;">Инцидент-менеджер в Сбере, Сбер</p>
+        </div>
+      </div>
+    </div>
+      <div class="pure-g snap-to-grid" style="background: var(--element-color, #F1F3F9); border-radius: 1.5rem; padding: 1.5rem; margin-top: 2rem">
+        <div class="pure-u-1 pure-u-md-1-2">
+          <h2 style="font-family: Inter; margin: inherit; color: var(--text-color, #2B303D);">На чем <br /> основана <br /> оценка?</h2>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 text block-padding">Рейтинг не связан с каким-либо университетом или государственным учреждением. Наша задача — предоставить достоверные сведения, основанные на экспертной оценке, которые позволят
+          вузам не только
+          оценить
+          текущее состояние своих сайтов, но и принять меры для их улучшения.
+          <br /> <br /> Ознакомьтесь с нашей методологией, чтобы понять, какие критерии учитываются при оценке и формировании рейтинга. Среди экспертов, которые проанализируют сотни университетов по всей России, — представители
+          прогрессивных
+          вузов, лидеры ИТ-индустрии, опытные разработчики и дизайнеры.
+          <br /><br />
+          <div style="display: flex;"><button class="btn-excl">Методология оценки</button><button class="btn-icon"><img src="img/arrow-right.svg" style="height: 1rem" /></button></div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="content-limiter">
+      <div id="footer-flex" class="snap-to-grid" style="border-radius: 32px; display: flex; justify-content: space-between; background-color: var(--text-color, #2b303d); margin-top: 16px; padding: 2rem;">
+        <img loading="lazy" src="img/nrsi_logo_white.svg" class="img" style="width: 100%; overflow: hidden; max-width: 16rem; margin: auto 0;" />
+        <div>
+          <div style="gap: 8px; display: flex; align-items: flex-start;">
+            <a href="privacy-policy" style="color: var(--text-contrast-color, #fff); font: 400 14px/157% Inter, sans-serif;">Политика конфиденциальности</a><br />
+            <a href="account" style="color: var(--text-contrast-color, #fff); font: 400 14px/157% Inter, sans-serif;">Личный кабинет</a><br />
+          </div>
+          <div style="color: var(--text-contrast-color, #fff); margin-top: 3rem; align-self: left; white-space: nowrap; font: 400 14px/157% Inter, sans-serif; float: right">Разработано в <img loading="lazy" src="img/paraweb.svg"
+              style="margin-left: 0.125rem; transform: translate(0px,0.2rem);" /></div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="ratenav" class="overlay1">
+      <div class="snap-to-grid">
+        <img loading="lazy" style="padding-top: 2rem" src="img/nrsi_logo_white.svg" id="logo" />
+        <a href="javascript:void(0)" class="curtain-button" style="margin: 16px; float: right" onclick="closeNav()"> <img src="img/close.svg" /></a>
+        <div style="display: flex; flex-direction: column; padding: 2rem">
+          <h2><a href="#" style="text-decoration: none; color: white">О проекте</a></h2>
+          <h2><a href="#" style="text-decoration: none; color: white">Эксперты</a></h2>
+          <h2><a href="#" style="text-decoration: none; color: white">Методология</a></h2>
+          <h2><a href="#" style="text-decoration: none; color: white">Рейтинг</a></h2>
+          <p>
+            <span id="auth"><button class="btn-excl" style="background-color: #5545c5;">Личный кабинет</button><button class="btn-excl" style="background-color: #5545c5;"><img src="img/user.svg" style="height: 1rem" /></button></span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--Умница, залез в код и нашёл комментарий. Доволен собой? :)-->
+  </body>
+
+</html>

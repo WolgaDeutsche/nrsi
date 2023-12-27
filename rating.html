@@ -1,0 +1,412 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Рейтинг НРСИ</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- <link rel="stylesheet" href="styles.css" /> -->
+  <link rel="stylesheet" href="css/pure-min.css" />
+  <link rel="stylesheet" href="css/grids-responsive-min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+  <header style="border-bottom: 1px solid var(--border-color, #eaeaea);">
+    <div class="topnav content-limiter">
+      <img loading="lazy" src="img/nrsi_logo.svg" id="logo" class="snap-to-grid" />
+      <button class="h-navbar-icon hide-desktop" onclick="openNav()" style="margin-left: 8px; float: right;"><img src="img/menu.svg" /></button>
+      <span id="auth" class="hide-mobile snap-to-grid"><button class="btn-excl">Личный кабинет</button><button class="btn-excl"><img src="img/user.svg" style="height: 1rem" /></button></span>
+      <a style="color: #2D19BC" href="">Рейтинг</a>
+      <a style="color: #2B303D;" href="">Методология</a>
+      <a style="color: #2B303D;" href="">Эксперты</a>
+      <a style="color: #2B303D;" href="./index.html">О проекте</a>
+    </div>
+  </header>
+
+  <div class="content-limiter">
+    <div class="snap-to-grid" style="margin-top: 4rem">
+      <div>
+        <h1>Рейтинг университетов</h1>
+        <p>В рейтинге представлены 200 лучших сайтов Российских университетов.</p>
+        <p>При формировании рейтинга эксперты оценивали удобство, эргономику, технические свойства, доступность информации, а также цифровой бренд вуза.</p>
+      <div style="display: flex;">
+        <button class="btn-excl">Подробнее о методологии</button><button class="btn-icon"><img src="img/arrow-right.svg" style="height: 1rem"/></button>
+      </div>
+      </div>
+    </div>
+
+    <div class="snap-to-grid" style="margin-top: 5rem; display: grid; grid-template-columns: 32fr 1fr; gap: 0.5rem;">
+      <input class="search" type="text" placeholder="Начните поиск" style="width: inherit; height: 1.75rem; padding: 0.5rem; display: flex;"></input>
+      <button class="btn-icon" style="height: 3rem"><img src="img/search.svg" style="height: 1rem"/></button>
+    </div>
+
+    <button class="snap-to-grid hide-desktop" onclick="openNav1()" style="margin-top: 1rem; width: 93%; padding: 15px 20px; align-items: center; gap: 12px; border: 1px; border-radius: 12px; background: var(--element-color, #F1F3F9); display: flex;"><p>Фильтр ()</p><img style="margin-left: auto;" src="img/filter.svg"></button>
+
+    <div class="dropdown snap-to-grid hide-mobile" style="margin-left: 2rem;">
+      <button onclick="org()" class="dropbtn" style="margin-top: 2rem; display: flex; width: 325px; padding: 20px 24px; align-items: center; gap: 12px; border-radius: 12px; border: 1px solid var(--border-color, #EAEAEA); color: var(--text-color, #A2A7B6); background-color: var(--primary-color, #fff)">Учредитель<img src="img/caret-down.svg" style="height: 1rem; margin-left: auto; height: 24px; width: 24px;"></button>
+      <div id="org" class="dropdown-content" style="width: 100%; ">
+        <a href="#home">Lorem ipsum</a>
+      </div>
+    </div>
+    <div class="dropdown snap-to-grid hide-mobile" style="margin-left: 0">
+      <button onclick="reg()" class="dropbtn" style="margin-top: 2rem; display: flex; width: 325px; padding: 20px 24px; align-items: center; gap: 12px; border-radius: 12px; border: 1px solid var(--border-color, #EAEAEA); color: var(--text-color, #A2A7B6); background-color: var(--primary-color, #fff)">Регион<img src="img/caret-down.svg" style="height: 1rem; margin-left: auto; height: 24px; width: 24px;"></button>
+      <div id="reg" class="dropdown-content" style="width: 100%;">
+        <a href="#home">Lorem ipsum</a>
+      </div>
+    </div>
+    <div class="dropdown snap-to-grid hide-mobile" style="margin-left: 0">
+      <button onclick="year()" class="dropbtn" style="margin-top: 2rem; display: flex; width: 124px; padding: 20px 24px; align-items: center; gap: 12px; border-radius: 12px; border: 1px solid var(--border-color, #EAEAEA); color: var(--text-color, #A2A7B6); background-color: var(--primary-color, #fff)">2023<img src="img/caret-down.svg" style="height: 1rem; margin-left: auto; height: 24px; width: 24px;"></button>
+      <div id="year" class="dropdown-content" style="width: 100%;">
+        <a href="#home">Lorem ipsum</a>
+      </div>
+    </div>
+
+  <div class="snap-to-grid hide-mobile" style="display: flex; flex-direction: column;">
+   <div style="display: flex; align-items: flex-start; gap: 20px; flex-direction: row; border-bottom: 1px solid var(--border-color, #EAEAEA);"> 
+    <p style="color: var(--text-dissabled-color, #A2A7B6); font-size: 16px; width: 6rem;">Место</p>
+    <p style="color: var(--text-dissabled-color, #A2A7B6); font-size: 16px;">Название вуза</p>
+    <p style="color: var(--text-dissabled-color, #A2A7B6); font-size: 16px; margin-left: auto; margin-right: 10rem;">Баллы</p>
+  </div>
+   <div style="display: flex; align-items: flex-start; gap: 20px; border-bottom: 1px solid var(--border-color, #EAEAEA);">
+    <p style="color: var(--text-dissabled-color, #A2A7B6); gap: 2.5rem; font-size: 20px; width: 6rem;">1</p>
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px; flex: 1 0 0; ">
+    <p>Российский национальный исследовательский медицинский университет имени Н. И. Пирогова</p>
+    <p>Перейти на сайт <span style="color: #2D19BC;">➝</span></p>
+    </div>
+    <p style="display: flex; width: 11rem; padding: 0.5rem 1rem; align-items: flex-start; gap: 10px; flex-shrink: 0; border-radius: 12px; background: var(--element-color, #F1F3F9);">100,50</p>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 20px; border-bottom: 1px solid var(--border-color, #EAEAEA);">
+    <p style="color: var(--text-dissabled-color, #A2A7B6); gap: 2.5rem; font-size: 20px; width: 6rem;">2</p>
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px; flex: 1 0 0; ">
+    <p>Негосударственное образовательное учреждение высшего образования «Московский институт юриспруденции»</p>
+    <p>Перейти на сайт <span style="color: #2D19BC;">➝</span></p>
+    </div>
+    <p style="display: flex; width: 11rem; padding: 0.5rem 1rem; align-items: flex-start; gap: 10px; flex-shrink: 0; border-radius: 12px; background: var(--element-color, #F1F3F9);">100,50</p>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 20px; border-bottom: 1px solid var(--border-color, #EAEAEA);">
+    <p style="color: var(--text-dissabled-color, #A2A7B6); gap: 2.5rem; font-size: 20px; width: 6rem;">3</p>
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px; flex: 1 0 0; ">
+    <p>Московский государственный университет имени М.В.Ломоносова</p>
+    <p>Перейти на сайт <span style="color: #2D19BC;">➝</span></p>
+    </div>
+    <p style="display: flex; width: 11rem; padding: 0.5rem 1rem; align-items: flex-start; gap: 10px; flex-shrink: 0; border-radius: 12px; background: var(--element-color, #F1F3F9);">100,50</p>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 20px; border-bottom: 1px solid var(--border-color, #EAEAEA);">
+    <p style="color: var(--text-dissabled-color, #A2A7B6); gap: 2.5rem; font-size: 20px; width: 6rem;">4</p>
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px; flex: 1 0 0; ">
+    <p>Российский национальный исследовательский медицинский университет имени Н. И. Пирогова</p>
+    <p>Перейти на сайт <span style="color: #2D19BC;">➝</span></p>
+    </div>
+    <p style="display: flex; width: 11rem; padding: 0.5rem 1rem; align-items: flex-start; gap: 10px; flex-shrink: 0; border-radius: 12px; background: var(--element-color, #F1F3F9);">100,50</p>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 20px; border-bottom: 1px solid var(--border-color, #EAEAEA);">
+    <p style="color: var(--text-dissabled-color, #A2A7B6); gap: 2.5rem; font-size: 20px; width: 6rem;">5</p>
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px; flex: 1 0 0; ">
+    <p>Российский национальный исследовательский медицинский университет имени Н. И. Пирогова</p>
+    <p>Перейти на сайт <span style="color: #2D19BC;">➝</span></p>
+    </div>
+    <p style="display: flex; width: 11rem; padding: 0.5rem 1rem; align-items: flex-start; gap: 10px; flex-shrink: 0; border-radius: 12px; background: var(--element-color, #F1F3F9);">100,50</p>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 20px; border-bottom: 1px solid var(--border-color, #EAEAEA);">
+    <p style="color: var(--text-dissabled-color, #A2A7B6); gap: 2.5rem; font-size: 20px; width: 6rem;">6</p>
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px; flex: 1 0 0; ">
+    <p>Российский национальный исследовательский медицинский университет имени Н. И. Пирогова</p>
+    <p>Перейти на сайт <span style="color: #2D19BC;">➝</span></p>
+    </div>
+    <p style="display: flex; width: 11rem; padding: 0.5rem 1rem; align-items: flex-start; gap: 10px; flex-shrink: 0; border-radius: 12px; background: var(--element-color, #F1F3F9);">100,50</p>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 20px; border-bottom: 1px solid var(--border-color, #EAEAEA);">
+    <p style="color: var(--text-dissabled-color, #A2A7B6); gap: 2.5rem; font-size: 20px; width: 6rem;">7</p>
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px; flex: 1 0 0; ">
+    <p>Российский национальный исследовательский медицинский университет имени Н. И. Пирогова</p>
+    <p>Перейти на сайт <span style="color: #2D19BC;">➝</span></p>
+    </div>
+    <p style="display: flex; width: 11rem; padding: 0.5rem 1rem; align-items: flex-start; gap: 10px; flex-shrink: 0; border-radius: 12px; background: var(--element-color, #F1F3F9);">100,50</p>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 20px; border-bottom: 1px solid var(--border-color, #EAEAEA);">
+    <p style="color: var(--text-dissabled-color, #A2A7B6); gap: 2.5rem; font-size: 20px; width: 6rem;">8</p>
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px; flex: 1 0 0; ">
+    <p>Российский национальный исследовательский медицинский университет имени Н. И. Пирогова</p>
+    <p>Перейти на сайт <span style="color: #2D19BC;">➝</span></p>
+    </div>
+    <p style="display: flex; width: 11rem; padding: 0.5rem 1rem; align-items: flex-start; gap: 10px; flex-shrink: 0; border-radius: 12px; background: var(--element-color, #F1F3F9);">100,50</p>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 20px; border-bottom: 1px solid var(--border-color, #EAEAEA);">
+    <p style="color: var(--text-dissabled-color, #A2A7B6); gap: 2.5rem; font-size: 20px; width: 6rem;">9</p>
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px; flex: 1 0 0; ">
+    <p>Российский национальный исследовательский медицинский университет имени Н. И. Пирогова</p>
+    <p>Перейти на сайт <span style="color: #2D19BC;">➝</span></p>
+    </div>
+    <p style="display: flex; width: 11rem; padding: 0.5rem 1rem; align-items: flex-start; gap: 10px; flex-shrink: 0; border-radius: 12px; background: var(--element-color, #F1F3F9);">100,50</p>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 20px; border-bottom: 1px solid var(--border-color, #EAEAEA);">
+    <p style="color: var(--text-dissabled-color, #A2A7B6); gap: 2.5rem; font-size: 20px; width: 6rem;">10</p>
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px; flex: 1 0 0; ">
+    <p>Российский национальный исследовательский медицинский университет имени Н. И. Пирогова</p>
+    <p>Перейти на сайт <span style="color: #2D19BC;">➝</span></p>
+    </div>
+    <p style="display: flex; width: 11rem; padding: 0.5rem 1rem; align-items: flex-start; gap: 10px; flex-shrink: 0; border-radius: 12px; background: var(--element-color, #F1F3F9);">100,50</p>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 20px; border-bottom: 1px solid var(--border-color, #EAEAEA);">
+    <p style="color: var(--text-dissabled-color, #A2A7B6); gap: 2.5rem; font-size: 20px; width: 6rem;">11</p>
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px; flex: 1 0 0; ">
+    <p>Российский национальный исследовательский медицинский университет имени Н. И. Пирогова</p>
+    <p>Перейти на сайт <span style="color: #2D19BC;">➝</span></p>
+    </div>
+    <p style="display: flex; width: 11rem; padding: 0.5rem 1rem; align-items: flex-start; gap: 10px; flex-shrink: 0; border-radius: 12px; background: var(--element-color, #F1F3F9);">100,50</p>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 20px; border-bottom: 1px solid var(--border-color, #EAEAEA);">
+    <p style="color: var(--text-dissabled-color, #A2A7B6); gap: 2.5rem; font-size: 20px; width: 6rem;">12</p>
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px; flex: 1 0 0; ">
+    <p>Российский национальный исследовательский медицинский университет имени Н. И. Пирогова</p>
+    <p>Перейти на сайт <span style="color: #2D19BC;">➝</span></p>
+    </div>
+    <p style="display: flex; width: 11rem; padding: 0.5rem 1rem; align-items: flex-start; gap: 10px; flex-shrink: 0; border-radius: 12px; background: var(--element-color, #F1F3F9);">100,50</p>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 20px; border-bottom: 1px solid var(--border-color, #EAEAEA);">
+    <p style="color: var(--text-dissabled-color, #A2A7B6); gap: 2.5rem; font-size: 20px; width: 6rem;">13</p>
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px; flex: 1 0 0; ">
+    <p>Российский национальный исследовательский медицинский университет имени Н. И. Пирогова</p>
+    <p>Перейти на сайт <span style="color: #2D19BC;">➝</span></p>
+    </div>
+    <p style="display: flex; width: 11rem; padding: 0.5rem 1rem; align-items: flex-start; gap: 10px; flex-shrink: 0; border-radius: 12px; background: var(--element-color, #F1F3F9);">100,50</p>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 20px; border-bottom: 1px solid var(--border-color, #EAEAEA);">
+    <p style="color: var(--text-dissabled-color, #A2A7B6); gap: 2.5rem; font-size: 20px; width: 6rem;">14</p>
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px; flex: 1 0 0; ">
+    <p>Российский национальный исследовательский медицинский университет имени Н. И. Пирогова</p>
+    <p>Перейти на сайт <span style="color: #2D19BC;">➝</span></p>
+    </div>
+    <p style="display: flex; width: 11rem; padding: 0.5rem 1rem; align-items: flex-start; gap: 10px; flex-shrink: 0; border-radius: 12px; background: var(--element-color, #F1F3F9);">100,50</p>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 20px; border-bottom: 1px solid var(--border-color, #EAEAEA);">
+    <p style="color: var(--text-dissabled-color, #A2A7B6); gap: 2.5rem; font-size: 20px; width: 6rem;">15</p>
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px; flex: 1 0 0; ">
+    <p>Российский национальный исследовательский медицинский университет имени Н. И. Пирогова</p>
+    <p>Перейти на сайт <span style="color: #2D19BC;">➝</span></p>
+    </div>
+    <p style="display: flex; width: 11rem; padding: 0.5rem 1rem; align-items: flex-start; gap: 10px; flex-shrink: 0; border-radius: 12px; background: var(--element-color, #F1F3F9);">100,50</p>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 20px; border-bottom: 1px solid var(--border-color, #EAEAEA);">
+    <p style="color: var(--text-dissabled-color, #A2A7B6); gap: 2.5rem; font-size: 20px; width: 6rem;">16</p>
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px; flex: 1 0 0; ">
+    <p>Российский национальный исследовательский медицинский университет имени Н. И. Пирогова</p>
+    <p>Перейти на сайт <span style="color: #2D19BC;">➝</span></p>
+    </div>
+    <p style="display: flex; width: 11rem; padding: 0.5rem 1rem; align-items: flex-start; gap: 10px; flex-shrink: 0; border-radius: 12px; background: var(--element-color, #F1F3F9);">100,50</p>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 20px; border-bottom: 1px solid var(--border-color, #EAEAEA);">
+    <p style="color: var(--text-dissabled-color, #A2A7B6); gap: 2.5rem; font-size: 20px; width: 6rem;">17</p>
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px; flex: 1 0 0; ">
+    <p>Российский национальный исследовательский медицинский университет имени Н. И. Пирогова</p>
+    <p>Перейти на сайт <span style="color: #2D19BC;">➝</span></p>
+    </div>
+    <p style="display: flex; width: 11rem; padding: 0.5rem 1rem; align-items: flex-start; gap: 10px; flex-shrink: 0; border-radius: 12px; background: var(--element-color, #F1F3F9);">100,50</p>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 20px; border-bottom: 1px solid var(--border-color, #EAEAEA);">
+    <p style="color: var(--text-dissabled-color, #A2A7B6); gap: 2.5rem; font-size: 20px; width: 6rem;">18</p>
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px; flex: 1 0 0; ">
+    <p>Российский национальный исследовательский медицинский университет имени Н. И. Пирогова</p>
+    <p>Перейти на сайт <span style="color: #2D19BC;">➝</span></p>
+    </div>
+    <p style="display: flex; width: 11rem; padding: 0.5rem 1rem; align-items: flex-start; gap: 10px; flex-shrink: 0; border-radius: 12px; background: var(--element-color, #F1F3F9);">100,50</p>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 20px; border-bottom: 1px solid var(--border-color, #EAEAEA);">
+    <p style="color: var(--text-dissabled-color, #A2A7B6); gap: 2.5rem; font-size: 20px; width: 6rem;">19</p>
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px; flex: 1 0 0; ">
+    <p>Российский национальный исследовательский медицинский университет имени Н. И. Пирогова</p>
+    <p>Перейти на сайт <span style="color: #2D19BC;">➝</span></p>
+    </div>
+    <p style="display: flex; width: 11rem; padding: 0.5rem 1rem; align-items: flex-start; gap: 10px; flex-shrink: 0; border-radius: 12px; background: var(--element-color, #F1F3F9);">100,50</p>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 20px; border-bottom: 1px solid var(--border-color, #EAEAEA);">
+    <p style="color: var(--text-dissabled-color, #A2A7B6); gap: 2.5rem; font-size: 20px; width: 6rem;">20</p>
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px; flex: 1 0 0; ">
+    <p>Российский национальный исследовательский медицинский университет имени Н. И. Пирогова</p>
+    <p>Перейти на сайт <span style="color: #2D19BC;">➝</span></p>
+    </div>
+    <p style="display: flex; width: 11rem; padding: 0.5rem 1rem; align-items: flex-start; gap: 10px; flex-shrink: 0; border-radius: 12px; background: var(--element-color, #F1F3F9);">100,50</p>
+  </div>
+  </div>
+    
+
+ <div class="hide-desktop"> 
+  <button class="accordion" style="color: var(--text-dissabled-color, #A2A7B6); font-size: 16px;">1 <br /> <span style="color: #2b303d;"><p>Российский национальный исследовательский медицинский университет имени Н. И. Пирогова</p></span></button>
+  <div class="panel" style="display: flex; flex-direction: column;"> 
+    <p style="color: var(--text-dissabled-color, #A2A7B6); font-size: 16px; margin-right: auto; margin-top: 0;">Баллы</p>
+    <p style="display: flex; width: 9rem; margin-top: 0; padding: 0.5rem 1rem; align-items: flex-start; gap: 10px; flex-shrink: 0; border-radius: 12px; background: var(--element-color, #F1F3F9);">100,50</p>
+    <p style="color: var(--text-dissabled-color, #A2A7B6); font-size: 16px; margin-right: auto; margin-top: 0;">Сайт</p>
+    <p style=" margin-top: 0;">Перейти на сайт <span style="color: #2D19BC;">➝</span></p>
+   </div>
+  </div>
+
+  
+
+    <div class="pure-g snap-to-grid" style="background: var(--element-color, #F1F3F9); border-radius: 1.5rem; padding: 1.5rem; margin-top: 10rem">
+      <div class="pure-u-1 pure-u-md-1-2">
+        <h2 style="font-family: Inter; margin: inherit; color: var(--text-color, #2B303D);">На чем <br /> основана <br /> оценка?</h2>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2 text block-padding">Рейтинг не связан с каким-либо университетом или государственным учреждением. Наша задача — предоставить достоверные сведения, основанные на экспертной оценке, которые позволят
+        вузам не только
+        оценить
+        текущее состояние своих сайтов, но и принять меры для их улучшения.
+        <br /> <br /> Ознакомьтесь с нашей методологией, чтобы понять, какие критерии учитываются при оценке и формировании рейтинга. Среди экспертов, которые проанализируют сотни университетов по всей России, — представители прогрессивных
+        вузов, лидеры ИТ-индустрии, опытные разработчики и дизайнеры.
+        <br /><br />
+        <div style="display: flex;"><button class="btn-excl">Методология оценки</button><button class="btn-icon"><img src="img/arrow-right.svg" style="height: 1rem" /></button></div>
+      </div>
+    </div>
+  </div>
+  <footer class="content-limiter">
+    <div id="footer-flex" class="snap-to-grid" style="display: flex; justify-content: space-between;; border-radius: 32px; background-color: var(--text-color, #2b303d); margin-top: 16px; padding: 2rem;">
+      <img loading="lazy" id="logo" src="img/nrsi_logo_white.svg" class="snap-to-grid" style="width: 100%; overflow: hidden; max-width: 16rem; margin: auto 0;" />
+      <div>
+        <div style="gap: 8px; display: flex; align-items: flex-start;">
+          <a href="privacy-policy" style="color: var(--text-contrast-color, #fff); font: 400 14px/157% Inter, sans-serif;">Политика конфиденциальности</a><br />
+          <a href="account" style="color: var(--text-contrast-color, #fff); font: 400 14px/157% Inter, sans-serif;">Личный кабинет</a><br />
+        </div>
+        <div style="color: var(--text-contrast-color, #fff); margin-top: 3rem; align-self: left; white-space: nowrap; font: 400 14px/157% Inter, sans-serif; float: right">Разработано в <img loading="lazy" src="img/paraweb.svg"
+            style="margin-left: 0.125rem; transform: translate(0px,0.2rem);" /></div>
+      </div>
+    </div>
+  </footer>
+  <!--Умница, залез в код и нашёл комментарий. Доволен собой? :)-->
+  <div id="filternav" class="overlay">
+    <div class="snap-to-grid">
+      <span style="display: flex;"><h2>Фильтр</h2><a href="javascript:void(0)" class="curtain-button-white" style="margin-top: 1.5rem; margin-left: auto;" onclick="closeNav1()"> <img src="img/close.svg" /></a></span>
+      <div style="border-bottom: 1px solid var(--border-color, #eaeaea);">
+      <button class="accordion" >Учредитель ()</button>
+      <div class="panel" style="margin-top: 1rem;">
+        <label class="container">Центральный федеральный округ
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Северо-западный федерльный округ
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Южный федеральный округ
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Северо-Кавказский федеральный округ
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Приволжский федеральный округ
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Уральский федеральный округ
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Сибирский федеральный округ
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Дальневосточный федеральный округ
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        
+      </div>
+      </div>
+      <div style="margin-top: 1rem; border-bottom: 1px solid var(--border-color, #eaeaea);">
+      <button class="accordion">Регион()</button>
+      <div class="panel">
+        <label class="container">Центральный федеральный округ
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Северо-западный федерльный округ
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Южный федеральный округ
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Северо-Кавказский федеральный округ
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Приволжский федеральный округ
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Уральский федеральный округ
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Сибирский федеральный округ
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Дальневосточный федеральный округ
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      </div>
+      <div style="margin-top: 1rem; border-bottom: 1px solid var(--border-color, #eaeaea);">
+      <button class="accordion">Год</button>
+      <div class="panel">
+        <label class="container">Центральный федеральный округ
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Северо-западный федерльный округ
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Южный федеральный округ
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Северо-Кавказский федеральный округ
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Приволжский федеральный округ
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Уральский федеральный округ
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Сибирский федеральный округ
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Дальневосточный федеральный округ
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div id="ratenav" class="overlay1">
+      <div class="snap-to-grid">
+        <img loading="lazy" style="padding-top: 2rem" src="img/nrsi_logo_white.svg" id="logo" />
+        <a href="javascript:void(0)" class="curtain-button" style="margin: 16px; float: right" onclick="closeNav()"> <img src="img/close.svg" /></a>
+        <div style="display: flex; flex-direction: column; padding: 2rem">
+          <h2><a href="#" style="text-decoration: none; color: white">О проекте</a></h2>
+          <h2><a href="#" style="text-decoration: none; color: white">Эксперты</a></h2>
+          <h2><a href="#" style="text-decoration: none; color: white">Методология</a></h2>
+          <h2><a href="#" style="text-decoration: none; color: white">Рейтинг</a></h2>
+          <p>
+            <span id="auth"><button class="btn-excl" style="background-color: #5545c5;">Личный кабинет</button><button class="btn-excl" style="background-color: #5545c5;"><img src="img/user.svg" style="height: 1rem" /></button></span>
+          </p>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
