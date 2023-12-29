@@ -64,6 +64,12 @@ h6 {
   }
 }
 
+@media (max-width: 877px) {
+  #dropdown_year {
+    margin-left: 2rem!important;
+  }
+}
+
 a {
   text-decoration: none;
 }
@@ -188,7 +194,7 @@ html {
 }
 
 /* Change the color of links on hover */
-.topnav a:hover {
+.topnav-trans a:hover {
   color: #2D19BC;
   transition: color 1s;
 }
@@ -316,7 +322,7 @@ html {
   .hide-mobile {
     display: none!important;
   }
-  .killme {
+  .btn-link {
     padding: 1rem 1.5rem!important;
     font-size: 1rem!important;
   }
@@ -443,7 +449,7 @@ html {
   }
 }
 
-.killme {
+.btn-link {
   background-color: #5545c5;
   color: #fff;
   border: 1px;
