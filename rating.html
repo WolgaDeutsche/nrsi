@@ -39,8 +39,10 @@
     </div>
 
     <div class="snap-to-grid" style="margin-top: 12rem; display: grid; grid-template-columns: 32fr 1fr; gap: 0.5rem;">
-      <input class="search" type="text" placeholder="Начните поиск" style="width: inherit; height: 1.75rem; padding: 0.5rem; display: flex;"></input>
-      <button class="btn-icon" style="height: 3rem"><img src="img/search.svg" style="height: 1rem"/></button>
+      <form method="post" action="" id="searchform">
+      <input class="search" id="searchfield" type="text" placeholder="Начните поиск" style="width: inherit; height: 1.75rem; padding: 0.5rem; display: flex;"></input>
+      <button class="btn-icon" style="height: 3rem" type="submit"><img src="img/search.svg" style="height: 1rem"/></button>
+      </form>
     </div>
 
     <button class="snap-to-grid hide-desktop" onclick="openNav1()" style="margin-top: 1rem; width: 93%; padding: 15px 20px; align-items: center; gap: 12px; border: 1px; border-radius: 12px; background: var(--element-color, #F1F3F9); display: flex;"><p>Фильтр ()</p><img style="margin-left: auto;" src="img/filter.svg"></button>
@@ -64,7 +66,7 @@
       </div>
     </div>
 
-  <div class="snap-to-grid hide-mobile" style="display: flex; flex-direction: column;">
+  <div id="university_table" class="snap-to-grid hide-mobile" style="display: flex; flex-direction: column;">
    <div style="display: flex; align-items: flex-start; gap: 20px; flex-direction: row; border-bottom: 1px solid var(--border-color, #EAEAEA);"> 
     <p style="color: var(--text-dissabled-color, #A2A7B6); font-size: 16px; width: 6rem;">Место</p>
     <p style="color: var(--text-dissabled-color, #A2A7B6); font-size: 16px;">Название вуза</p>
@@ -424,7 +426,7 @@
   </div>
 
   <script>
-    var acc = document.getElementsByClassName("accordion");
+  var acc = document.getElementsByClassName("accordion");
   var i;
   
   for (i = 0; i < acc.length; i++) {
@@ -439,18 +441,22 @@
     });
   }
 
-  var search_form = $('Form');
+  $("#searchform input[type='submit']").click(function() {
+    input = $("#searchfield").val();
 
-  form.on("submit", function (evnt){
-    evnt.preventDefault();
-
-    $ajax({
-      type: "POST",
-      url: "placeholder",
-      data: $(this).serialize()
-    }).done(function(response){
-      console.log(response);
+    $.ajax({
+        type: "POST",
+        url: "/rating",
+        data: input,
+        success: function(result) {
+            $("#university_table").html(result).show();
+        },
+        error: function(result){
+            $("#university_table").html(result).show();
+        }
     });
+
+    return false;
   });
   </script>
 </body>
